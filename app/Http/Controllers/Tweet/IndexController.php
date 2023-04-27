@@ -16,6 +16,8 @@ class IndexController extends Controller
         // $tweets = Tweet::all();
         // $tweetService = new TweetService();
         $tweets = $tweetService->getTweets();
+        // dump($tweets);
+        // app(\App\Exceptions\Handler::class)->render(request(), throw new \Error('dump report.'));
         // $tweets = Tweet::orderBy('created_at', 'DESC')->get();
         return view('tweet.index')->with('tweets',$tweets);
         // dd($tweets);
